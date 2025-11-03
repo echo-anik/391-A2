@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fortune Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <h1>🔮 Daily Fortune Generator</h1>
+        <button id="new-fortune-btn" class="new-fortune-btn">Generate New Fortune</button>
+    </main>
+
+    <footer>
+        <div id="fortune-box">
+            <p id="fortune-text"></p>
+        </div>
+        <div id="controls">
+            <button class="btn" id="font-color-btn" title="Change Font Color"></button>
+            <button class="btn" id="bg-color-btn" title="Change Background Color"></button>
+            <button class="btn" id="border-color-btn" title="Change Border Color"></button>
+            <button class="btn" id="font-style-btn" title="Change Font Style"></button>
+        </div>
+        <div id="fortune-history">
+            <h3>Fortune History</h3>
+            <ul id="history-list"></ul>
+            <button id="clear-history-btn" class="clear-btn">Clear History</button>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

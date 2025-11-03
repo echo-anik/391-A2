@@ -1,0 +1,363 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    font-family: 'Georgia', 'Times New Roman', serif;
+    background: #ffffff;
+    padding: 40px 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: white;
+    border: 2px solid #000000;
+    padding: 50px 40px;
+}
+
+h1 {
+    color: #000000;
+    text-align: center;
+    margin-bottom: 40px;
+    font-weight: 400;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-size: 2.5rem;
+}
+
+.input-section {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+#task-input {
+    flex: 1;
+    padding: 12px 15px;
+    border: 2px solid #000000;
+    font-size: 1rem;
+    font-family: 'Georgia', 'Times New Roman', serif;
+    background: #ffffff;
+}
+
+#task-input:focus {
+    outline: none;
+    border-color: #000000;
+    background: #f9f9f9;
+}
+
+#add-btn {
+    padding: 12px 30px;
+    background: #000000;
+    color: #ffffff;
+    border: 2px solid #000000;
+    cursor: pointer;
+    font-weight: 400;
+    transition: all 0.3s;
+    letter-spacing: 1px;
+    font-family: 'Georgia', 'Times New Roman', serif;
+}
+
+#add-btn:hover {
+    background: #ffffff;
+    color: #000000;
+}
+
+.filter-section {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 25px;
+    justify-content: center;
+}
+
+.filter-btn {
+    padding: 8px 20px;
+    border: 1px solid #000000;
+    background: white;
+    cursor: pointer;
+    transition: all 0.3s;
+    letter-spacing: 1px;
+    font-size: 0.9rem;
+    font-weight: 300;
+    font-family: 'Georgia', 'Times New Roman', serif;
+}
+
+.filter-btn.active {
+    background: #000000;
+    color: white;
+    border-color: #000000;
+}
+
+.search-section {
+    margin-bottom: 25px;
+}
+
+#search-input {
+    width: 100%;
+    padding: 10px 15px;
+    border: 1px solid #cccccc;
+    font-size: 0.95rem;
+    font-family: 'Georgia', 'Times New Roman', serif;
+    background: #f9f9f9;
+}
+
+#search-input:focus {
+    outline: none;
+    border-color: #000000;
+    background: #ffffff;
+}
+
+#task-list {
+    list-style: none;
+    min-height: 200px;
+    margin-bottom: 30px;
+    border-top: 1px solid #e0e0e0;
+}
+
+.task-item {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    background: #ffffff;
+    margin-bottom: 0;
+    border-bottom: 1px solid #e0e0e0;
+    animation: slideIn 0.3s;
+    position: relative;
+    overflow: hidden;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.task-item:hover {
+    background: #f9f9f9;
+}
+
+.task-item.completed {
+    opacity: 0.5;
+    background: #f5f5f5;
+}
+
+.task-item.completed .task-text {
+    text-decoration: line-through;
+    color: #999999;
+}
+
+.task-checkbox {
+    width: 18px;
+    height: 18px;
+    margin-right: 15px;
+    cursor: pointer;
+    border: 1px solid #000000;
+}
+
+.task-text {
+    flex: 1;
+    font-size: 1rem;
+    word-break: break-word;
+    font-weight: 300;
+    line-height: 1.6;
+}
+
+.task-priority {
+    padding: 4px 10px;
+    font-size: 0.7rem;
+    font-weight: 400;
+    margin-right: 12px;
+    letter-spacing: 1px;
+    border: 1px solid #000000;
+}
+
+.priority-high {
+    background: #000000;
+    color: white;
+}
+
+.priority-medium {
+    background: #ffffff;
+    color: #000000;
+    border: 1px solid #000000;
+}
+
+.priority-low {
+    background: #ffffff;
+    color: #666666;
+    border: 1px solid #cccccc;
+}
+
+.btn-edit {
+    background: none;
+    border: none;
+    font-size: 1.1rem;
+    cursor: pointer;
+    color: #000000;
+    margin-right: 10px;
+    transition: opacity 0.2s;
+}
+
+.btn-edit:hover {
+    opacity: 0.6;
+}
+
+.btn-delete {
+    background: none;
+    border: none;
+    font-size: 1.3rem;
+    cursor: pointer;
+    color: #000000;
+    transition: opacity 0.2s;
+}
+
+.btn-delete:hover {
+    opacity: 0.6;
+}
+
+.stats {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 25px;
+    border-top: 1px solid #000000;
+}
+
+#task-count {
+    color: #000000;
+    font-weight: 300;
+    letter-spacing: 1px;
+    font-size: 0.95rem;
+}
+
+#clear-completed {
+    padding: 10px 20px;
+    background: #000000;
+    color: white;
+    border: 2px solid #000000;
+    cursor: pointer;
+    transition: all 0.3s;
+    letter-spacing: 1px;
+    font-family: 'Georgia', 'Times New Roman', serif;
+    font-weight: 400;
+}
+
+#clear-completed:hover {
+    background: #ffffff;
+    color: #000000;
+}
+
+.productivity-section {
+    margin-top: 30px;
+    padding-top: 30px;
+    border-top: 1px solid #000000;
+}
+
+.productivity-section h3 {
+    color: #000000;
+    text-align: center;
+    margin-bottom: 25px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.stat-box {
+    background: #ffffff;
+    padding: 25px 20px;
+    border: 1px solid #000000;
+    text-align: center;
+}
+
+.stat-value {
+    font-size: 2.5rem;
+    font-weight: 300;
+    margin-bottom: 8px;
+    color: #000000;
+    font-family: 'Courier New', monospace;
+}
+
+.stat-label {
+    font-size: 0.85rem;
+    color: #666666;
+    letter-spacing: 1px;
+    font-weight: 300;
+}
+
+.export-section {
+    margin-top: 25px;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.export-btn {
+    padding: 10px 25px;
+    background: #ffffff;
+    color: #000000;
+    border: 2px solid #000000;
+    cursor: pointer;
+    font-weight: 400;
+    transition: all 0.3s;
+    letter-spacing: 1px;
+    font-family: 'Georgia', 'Times New Roman', serif;
+}
+
+.export-btn:hover {
+    background: #000000;
+    color: #ffffff;
+}
+
+.empty-state {
+    text-align: center;
+    padding: 50px 20px;
+    color: #999999;
+}
+
+.empty-state-icon {
+    font-size: 3rem;
+    margin-bottom: 15px;
+    opacity: 0.5;
+}
+
+@media (max-width: 600px) {
+    .container {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .filter-section {
+        flex-wrap: wrap;
+    }
+
+    .export-section {
+        flex-direction: column;
+    }
+
+    .export-btn {
+        width: 100%;
+    }
+}

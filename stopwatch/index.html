@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stopwatch</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>⏱️ Stopwatch</h1>
+        <div id="display">0</div>
+        <div class="progress-bar">
+            <div id="progress-fill"></div>
+        </div>
+        <div id="status"></div>
+        <div class="controls">
+            <button id="start-btn" class="btn btn-start">Start</button>
+            <button id="stop-btn" class="btn btn-stop" disabled>Stop</button>
+            <button id="reset-btn" class="btn btn-reset">Reset</button>
+        </div>
+        <div class="lap-section">
+            <h3>Lap Times</h3>
+            <ul id="lap-list"></ul>
+            <button id="lap-btn" class="btn btn-lap" disabled>Record Lap</button>
+        </div>
+        <div class="stats-section">
+            <h3>Session Statistics</h3>
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <span class="stat-label">Total Sessions:</span>
+                    <span id="total-sessions" class="stat-value">0</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">Completions:</span>
+                    <span id="total-completions" class="stat-value">0</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
